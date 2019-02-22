@@ -24,7 +24,7 @@ func eval(a, b int, op string) (int, error) {
 	}
 }
 
-func div(a, b int) (q, r int) {
+func div(a, b int) (q, r int) { //返回值命名  q,r即为返回值的名字，可以先操作。
 	return a / b, a % b
 }
 

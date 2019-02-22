@@ -9,6 +9,7 @@ import (
 	"log"
 	"net/http"
 	"time"
+	"fmt"
 )
 
 const (
@@ -124,6 +125,7 @@ func main() {
 	// 将一些 Resource 发送至 pending 序列。
 	go func() {
 		for _, url := range urls {
+			fmt.Println(url)
 			pending <- &Resource{url: url}
 		}
 	}()

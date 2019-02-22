@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math"
 	"math/cmplx"
+	"os"
 )
 
 var (
@@ -83,16 +84,32 @@ func enums() {
 	fmt.Println(b, kb, mb, gb, tb, pb)
 }
 
-func main() {
-	fmt.Println("Hello world")
-	variableZeroValue()
-	variableInitialValue()
-	variableTypeDeduction()
-	variableShorter()
-	fmt.Println(aa, ss, bb)
+/*
+*    byte uint8别名
+*    rune int32别名
 
-	euler()
-	triangle()
-	consts()
-	enums()
+变量在定义时没有明确的初始化时会赋值为_零值_。
+
+零值是：
+
+数值类型为 `0`，
+布尔类型为 `false`，
+字符串为 `""`（空字符串）。
+**/
+
+func main() {
+	//fmt.Println("Hello world")
+	//variableZeroValue()
+	//variableInitialValue()
+	//variableTypeDeduction()
+	//variableShorter()
+	//fmt.Println(aa, ss, bb)
+	//
+	//euler()
+	//triangle()
+	//consts()
+	//enums()
+	for _,arg := range os.Args{
+		fmt.Println(arg)
+	}
 }
