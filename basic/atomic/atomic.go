@@ -18,6 +18,7 @@ func (a *atomicInt) increment() {
 		defer a.lock.Unlock()
 
 		a.value++
+		println(a.value)
 	}()
 }
 
@@ -52,9 +53,9 @@ func main() {
 		fmt.Println("并发结束4")
 	}()
 
-	for i:=0;true;i++{
+	for i := 0; true; i++ {
 		println(i)
-		time.Sleep(1000*time.Millisecond)
+		time.Sleep(1000 * time.Millisecond)
 	}
 	time.Sleep(1000 * time.Millisecond)
 	fmt.Println(a.get())

@@ -16,24 +16,24 @@ var (
 func variableZeroValue() {
 	var a int
 	var s string
-	fmt.Printf("%d %q\n", a, s)
+	fmt.Printf("%d %q\n", a, s) //变量未初始化为零值 0 ""
 }
 
 func variableInitialValue() {
 	var a, b int = 3, 4
 	var s string = "abc"
-	fmt.Println(a, b, s)
+	fmt.Println(a, b, s) //初始化 3 4 abc ，类型可以省略
 }
 
 func variableTypeDeduction() {
 	var a, b, c, s = 3, 4, true, "def"
-	fmt.Println(a, b, c, s)
+	fmt.Println(a, b, c, s) // 初始化 3 4 true def  类型推断
 }
 
 func variableShorter() {
 	a, b, c, s := 3, 4, true, "def"
 	b = 5
-	fmt.Println(a, b, c, s)
+	fmt.Println(a, b, c, s) // 赋值 3 5 true def
 }
 
 func euler() {
@@ -98,18 +98,18 @@ func enums() {
 **/
 
 func main() {
-	//fmt.Println("Hello world")
-	//variableZeroValue()
-	//variableInitialValue()
-	//variableTypeDeduction()
-	//variableShorter()
-	//fmt.Println(aa, ss, bb)
-	//
-	//euler()
-	//triangle()
-	//consts()
-	//enums()
-	for _,arg := range os.Args{
+	fmt.Println("Hello world")
+	variableZeroValue()
+	variableInitialValue()
+	variableTypeDeduction()
+	variableShorter()
+	fmt.Println(aa, ss, bb)
+
+	euler()
+	triangle()
+	consts()
+	enums()
+	for _, arg := range os.Args {
 		fmt.Println(arg)
 	}
 }
