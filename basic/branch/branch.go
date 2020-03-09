@@ -27,12 +27,12 @@ func main() {
 	// If "abc.txt" is not found,
 	// please check what current directory is,
 	// and change filename accordingly.
-	const filename = "basic/branch/abc.txt"
-	if contents, err := ioutil.ReadFile(filename); err != nil {
+	const filename = "abc.txt"
+	contents, err := ioutil.ReadFile(filename)
+	if err != nil {
 		fmt.Println(err)
-	} else {
-		fmt.Printf("file contents: %s\n", contents)
-	}
+	} 
+	fmt.Printf("file contents:\n%s\n", contents)
 
 	fmt.Println(
 		grade(0),

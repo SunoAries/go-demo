@@ -30,6 +30,7 @@ func div(a, b int) (q, r int) { //返回值命名  q,r即为返回值的名字�
 
 func apply(op func(int, int) int, a, b int) int {
 	p := reflect.ValueOf(op).Pointer()
+	fmt.Println(p)
 	opName := runtime.FuncForPC(p).Name()
 	fmt.Printf("Calling function %s with args "+
 		"(%d, %d)\n", opName, a, b)

@@ -12,7 +12,7 @@ type atomicInt struct {
 }
 
 func (a *atomicInt) increment() {
-	fmt.Println("safe increment")
+	fmt.Printf("safe increment: %d\n", a.value)
 	func() {
 		a.lock.Lock()
 		defer a.lock.Unlock()
@@ -53,10 +53,10 @@ func main() {
 		fmt.Println("并发结束4")
 	}()
 
-	for i := 0; true; i++ {
-		println(i)
-		time.Sleep(1000 * time.Millisecond)
-	}
+	// for i := 0; true; i++ {
+	// 	println(i)
+	// 	time.Sleep(1000 * time.Millisecond)
+	// }
 	time.Sleep(1000 * time.Millisecond)
 	fmt.Println(a.get())
 }

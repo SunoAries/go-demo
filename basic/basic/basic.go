@@ -80,7 +80,7 @@ func enums() {
 		pb
 	)
 
-	fmt.Println(cpp, javascript, python, golang)
+	fmt.Println(cpp, python, golang, javascript)
 	fmt.Println(b, kb, mb, gb, tb, pb)
 }
 
@@ -104,7 +104,7 @@ func main() {
 	variableTypeDeduction()
 	variableShorter()
 	fmt.Println(aa, ss, bb)
-
+	fmt.Println("------------------------------")
 	euler()
 	triangle()
 	consts()
