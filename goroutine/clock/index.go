@@ -19,7 +19,7 @@ func main() {
 			continue
 		}
 		log.Println("start send")
-		handleConn(conn)
+		go handleConn(conn)
 	}
 }
 

@@ -19,6 +19,10 @@ type worker struct {
 	done func()
 }
 
+func (wr *worker) init() {
+	wr.in = make(chan int)
+}
+
 func createWorker(
 	id int, wg *sync.WaitGroup) worker {
 	w := worker{
